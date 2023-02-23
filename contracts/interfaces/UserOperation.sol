@@ -54,7 +54,7 @@ library UserOperationLib {
             //legacy mode (for networks that don't support basefee opcode)
             return maxFeePerGas;
         }
-        return min(maxFeePerGas, maxPriorityFeePerGas + block.basefee);
+        return min(maxFeePerGas, maxPriorityFeePerGas /*+ block.basefee*/);
     }
     }
 
